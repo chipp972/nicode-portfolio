@@ -4,7 +4,8 @@ import typescript from 'eslint-config-next/typescript';
 // eslint-config-next 16 expose directement des flat configs :
 // pas de FlatCompat, qui casse sur ESLint 10 (structure circulaire).
 const eslintConfig = [
-  { ignores: ['.next/**', 'node_modules/**', 'design/**', 'next-env.d.ts'] },
+  // `.netlify/` contient les bundles minifiés produits par `netlify build`.
+  { ignores: ['.next/**', '.netlify/**', 'node_modules/**', 'design/**', 'next-env.d.ts'] },
   ...coreWebVitals,
   ...typescript,
 ];

@@ -8,18 +8,9 @@
 [build.environment]
   NODE_VERSION = "22"
 
-# Anciennes URLs du site Gatsby (monolingue, sans préfixe de locale).
-[[redirects]]
-  from = "/terms"
-  to = "/fr/mentions-legales"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/credits"
-  to = "/fr/credits"
-  status = 301
-  force = true
+# Les redirections des anciennes URLs Gatsby (/terms, /credits) sont dans
+# src/proxy.ts et non ici : sur Netlify, les edge functions s'exécutent avant
+# les règles de redirection, donc le proxy next-intl les interceptait d'abord.
 
 [dev]
   command = "npm run dev"
