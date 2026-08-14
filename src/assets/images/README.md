@@ -1,16 +1,12 @@
 # Images du site
 
-Les visuels de l'ancien site étaient servis par DatoCMS et imgix : aucun n'est
-récupérable depuis le dépôt. Les fichiers listés ci-dessous restent à fournir.
+Les images sont importées comme modules pour que `next/image` génère les variantes
+AVIF et WebP, le hash de cache et le placeholder flou. Elles sont recadrées et
+recompressées avant commit.
 
-Les images sont importées comme modules pour que `next/image` génère les variantes,
-le hash de cache et le placeholder flou. Format attendu : AVIF ou WebP, recompressé
-avant commit.
-
-| Fichier attendu | Usage | Cadrage |
+| Fichier | Usage | Format |
 | --- | --- | --- |
-| `portrait.avif` | Section Approche | Portrait, ratio 4/5, 1000 px de large minimum |
-| `og.png` | Aperçu de partage | 1200 × 630 px exactement |
+| `portrait.jpg` | Section Approche | 864 × 1080 (ratio 4/5) |
 
-Tant qu'une image manque, le composant concerné affiche un cadre neutre : la page
-reste valide et le build ne casse pas.
+L'aperçu de partage n'est pas un fichier : il est généré au build par
+`src/app/[locale]/opengraph-image.tsx`, à partir du contenu réel.

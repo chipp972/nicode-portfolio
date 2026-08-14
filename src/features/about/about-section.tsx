@@ -1,11 +1,8 @@
+import Image from 'next/image';
 import { Section, SectionHeader } from '@/components/ui/section';
+import portrait from '@/assets/images/portrait.jpg';
 import type { About } from '@/content';
 
-/**
- * Le portrait n'est pas encore fourni : DatoCMS le servait, il n'est pas dans le
- * dépôt. En attendant, un cadre neutre porte le texte alternatif prévu, ce qui
- * évite de casser la mise en page et documente le manque.
- */
 export function AboutSection({ content }: { content: About }) {
   return (
     <Section id="about">
@@ -26,12 +23,19 @@ export function AboutSection({ content }: { content: About }) {
           </p>
         </div>
 
-        <div
-          className="from-paper-2 to-accent-soft border-rule text-ink-2 font-mono grid aspect-4/5 place-items-center border bg-linear-160 p-4 text-center text-xs"
-          role="img"
-          aria-label={content.portraitAlt}>
-          {content.portraitAlt}
-        </div>
+        {/*
+          Import statique plutôt qu'un chemin dans public/ : Next dérive les
+          dimensions, génère les variantes AVIF et WebP, le hash de cache et le
+          placeholder flou. L'image est sous la ligne de flottaison, donc pas de
+          `priority` qui viendrait concurrencer le LCP du hero.
+        */}
+        <Image
+          src={portrait}
+          alt={content.portraitAlt}
+          sizes="(min-width: 1024px) 34vw, 100vw"
+          placeholder="blur"
+          className="border-rule aspect-4/5 w-full border object-cover"
+        />
       </div>
 
       <div className="border-rule mt-14 grid border-t md:grid-cols-3">
