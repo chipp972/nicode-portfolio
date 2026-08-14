@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicode — Direction 1 : Éditorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EDEFF3; --paper-2:#E3E7ED; --ink:#10141B; --ink-2:#4A525F;
+  --rule:#C7CDD7; --accent:#1F3BE0; --accent-soft:#DDE2FB;
+  --f-display:"Fraunces",Georgia,serif; --f-body:"Inter Tight",system-ui,sans-serif; --f-mono:"JetBrains Mono",monospace;
+  --page:min(1240px,100% - 3rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0C0F14;--paper-2:#141922;--ink:#EDEFF3;--ink-2:#98A2B3;--rule:#252C38;--accent:#8FA2FF;--accent-soft:#1A2140;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:var(--page);margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ── eyebrow / labels ── */
+.eyebrow{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+
+/* ── header ── */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:2rem}
+.brand{font-family:var(--f-display);font-weight:700;font-size:1.35rem;letter-spacing:-.02em;text-decoration:none}
+.brand span{color:var(--accent)}
+.nav ul{display:flex;gap:1.75rem;list-style:none;margin:0;padding:0}
+.nav a{text-decoration:none;font-size:.94rem;color:var(--ink-2)}
+.nav a:hover{color:var(--ink)}
+.lang{display:flex;gap:.4rem;font-family:var(--f-mono);font-size:.75rem}
+.lang b{color:var(--accent)}
+.lang span{color:var(--rule)}
+@media(max-width:820px){.nav ul{display:none}}
+
+/* ── hero: the thesis ── */
+.hero{padding:clamp(4rem,11vw,9rem) 0 clamp(3rem,6vw,5rem);border-bottom:1px solid var(--rule)}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem}
+h1{font-family:var(--f-display);font-weight:300;font-size:clamp(2.6rem,7.4vw,5.6rem);line-height:1.02;letter-spacing:-.035em;margin:1.6rem 0 0;max-width:16ch}
+h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+.lede{font-size:clamp(1.05rem,1.7vw,1.25rem);color:var(--ink-2);max-width:56ch;margin:1.8rem 0 0}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.4rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.8rem 1.5rem;border-radius:2px;text-decoration:none;font-weight:500;font-size:.95rem;border:1px solid var(--ink);transition:transform .18s,background .18s,color .18s}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn-ghost:hover{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.avail{display:inline-flex;align-items:center;gap:.55rem;margin-top:2.2rem;font-family:var(--f-mono);font-size:.78rem;color:var(--ink-2)}
+.dot{width:7px;height:7px;border-radius:50%;background:#14A06A;box-shadow:0 0 0 4px color-mix(in srgb,#14A06A 20%,transparent)}
+
+/* ── SIGNATURE: the ledger. Nine years, three products, read as a measured record. ── */
+.ledger{border-top:1px solid var(--rule);margin-top:clamp(3rem,6vw,4.5rem)}
+.ledger-row{display:grid;grid-template-columns:5.5rem 1fr auto;gap:1.5rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--rule)}
+.ledger-row .yr{font-family:var(--f-mono);font-size:.78rem;color:var(--ink-2)}
+.ledger-row .what{font-family:var(--f-display);font-size:clamp(1.05rem,2.2vw,1.5rem);font-weight:500;letter-spacing:-.02em}
+.ledger-row .who{font-family:var(--f-mono);font-size:.75rem;color:var(--ink-2);text-align:right}
+@media(max-width:640px){.ledger-row{grid-template-columns:4.5rem 1fr;gap:.8rem}.ledger-row .who{grid-column:2;text-align:left}}
+
+/* ── sections ── */
+section{padding:clamp(4rem,8vw,7rem) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;margin-bottom:3.5rem;padding-bottom:1.4rem;border-bottom:1px solid var(--rule)}
+h2{font-family:var(--f-display);font-weight:300;font-size:clamp(1.9rem,4.6vw,3.2rem);letter-spacing:-.03em;line-height:1.08;margin:.5rem 0 0;max-width:22ch}
+
+/* ── about ── */
+.about-cols{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+@media(max-width:900px){.about-cols{grid-template-columns:1fr}}
+.about-cols p{margin:0 0 1.3rem;max-width:62ch}
+.about-cols p:first-of-type{font-size:1.18rem;line-height:1.5}
+.portrait{aspect-ratio:4/5;background:linear-gradient(160deg,var(--paper-2),var(--accent-soft));border:1px solid var(--rule);display:grid;place-items:center;font-family:var(--f-mono);font-size:.72rem;color:var(--ink-2);text-align:center;padding:1rem}
+.note{border-left:2px solid var(--accent);padding:.2rem 0 .2rem 1.2rem;margin-top:2rem;color:var(--ink-2);font-size:.95rem}
+
+/* ── services ── */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3.5rem;border-top:1px solid var(--rule)}
+@media(max-width:900px){.svc{grid-template-columns:1fr}}
+.svc>div{padding:2rem 1.75rem 2.25rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.svc>div:last-child{border-right:none}
+@media(max-width:900px){.svc>div{border-right:none}}
+.svc h3{font-family:var(--f-display);font-weight:500;font-size:1.35rem;letter-spacing:-.02em;margin:.9rem 0 .7rem}
+.svc p{margin:0;color:var(--ink-2);font-size:.95rem}
+
+/* ── projects ── */
+.proj{border-top:1px solid var(--rule)}
+.proj-item{display:grid;grid-template-columns:6.5rem 1fr 12rem;gap:2rem;align-items:center;width:100%;text-align:left;background:none;border:none;border-bottom:1px solid var(--rule);padding:1.9rem .5rem;color:inherit;font:inherit;cursor:pointer;transition:background .2s,padding-left .2s}
+.proj-item:hover,.proj-item:focus-visible{background:var(--accent-soft);padding-left:1.25rem}
+.proj-item .yr{font-family:var(--f-mono);font-size:.76rem;color:var(--ink-2)}
+.proj-item .name{display:block;font-family:var(--f-display);font-weight:500;font-size:clamp(1.5rem,3.6vw,2.4rem);letter-spacing:-.03em;line-height:1.1}
+.proj-item .role{display:block;font-size:.92rem;color:var(--ink-2);margin-top:.3rem}
+.proj-item .meta{font-family:var(--f-mono);font-size:.72rem;color:var(--ink-2);text-align:right}
+.proj-item .arrow{display:inline-block;transition:transform .2s}
+.proj-item:hover .arrow{transform:translateX(5px)}
+@media(max-width:860px){.proj-item{grid-template-columns:1fr;gap:.5rem}.proj-item .meta{text-align:left}}
+
+/* ── drawer ── */
+.scrim{position:fixed;inset:0;background:color-mix(in srgb,var(--ink) 45%,transparent);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .35s;z-index:90}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:80vw;max-width:1080px;background:var(--paper);border-left:1px solid var(--rule);transform:translateX(100%);transition:transform .42s cubic-bezier(.32,.72,0,1);z-index:100;overflow-y:auto;overscroll-behavior:contain}
+.drawer.on{transform:none}
+@media(max-width:768px){.drawer{width:100vw}}
+.drawer-in{padding:clamp(1.75rem,4vw,3.5rem)}
+.drawer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;position:sticky;top:0;background:var(--paper);padding-bottom:1.25rem;border-bottom:1px solid var(--rule);margin-bottom:2.25rem}
+.close{background:none;border:1px solid var(--rule);color:var(--ink);width:2.6rem;height:2.6rem;border-radius:50%;cursor:pointer;font-size:1.1rem;flex-shrink:0;transition:background .2s,border-color .2s}
+.close:hover{background:var(--accent-soft);border-color:var(--accent)}
+.drawer h3{font-family:var(--f-display);font-weight:300;font-size:clamp(1.9rem,4.4vw,3rem);letter-spacing:-.03em;margin:.5rem 0 .4rem;line-height:1.05}
+.drawer .sub{color:var(--ink-2);font-family:var(--f-mono);font-size:.78rem}
+.cs{display:grid;grid-template-columns:9rem 1fr;gap:1.4rem 2.5rem;padding:1.5rem 0;border-bottom:1px solid var(--rule)}
+@media(max-width:720px){.cs{grid-template-columns:1fr;gap:.6rem}}
+.cs>dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin:0}
+.cs>dd{margin:0;max-width:66ch}
+.cs ul{margin:0;padding-left:1.15rem}
+.cs li{margin-bottom:.6rem}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;list-style:none;padding:0;margin:0}
+.tags li{font-family:var(--f-mono);font-size:.72rem;padding:.3rem .6rem;border:1px solid var(--rule);border-radius:2px;color:var(--ink-2)}
+
+/* ── contact ── */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule)}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid a{display:block;padding:2rem 1.75rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule);text-decoration:none;transition:background .2s}
+.contact-grid a:last-child{border-right:none}
+@media(max-width:820px){.contact-grid a{border-right:none}}
+.contact-grid a:hover{background:var(--accent-soft)}
+.contact-grid strong{display:block;font-family:var(--f-display);font-size:1.3rem;font-weight:500;letter-spacing:-.02em;margin:.7rem 0 .4rem}
+.contact-grid span{color:var(--ink-2);font-size:.9rem}
+.booking{margin-top:3rem;padding:2.25rem;border:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+.booking p{margin:0;max-width:46ch;color:var(--ink-2)}
+
+footer{border-top:1px solid var(--rule);padding:3rem 0 4rem;font-size:.88rem;color:var(--ink-2)}
+.foot{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;align-items:center}
+.foot ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;margin:0;padding:0}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">nicode<span>.</span></a>
+    <nav><ul>
+      <li><a href="#about">Approche</a></li>
+      <li><a href="#projects">Références</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+    <div class="lang"><b>FR</b><span>/</span><a href="#" style="text-decoration:none;color:var(--ink-2)">EN</a></div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow" id="eyebrow-hero"></p>
+        <h1>Reprenez le contrôle de votre front-end, <em>sans tout réécrire.</em></h1>
+        <p class="lede" id="lede-hero"></p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#projects">Voir mes références</a>
+          <a class="btn btn-ghost" href="#contact">Me contacter</a>
+        </div>
+        <p class="avail"><span class="dot"></span><span id="avail-hero"></span></p>
+      </div>
+
+      <!-- SIGNATURE : le relevé. Neuf ans lus comme un registre, pas comme un slider. -->
+      <div class="ledger">
+        <div class="ledger-row"><span class="yr">2023—2026</span><span class="what">Espace client, des millions d'utilisateurs</span><span class="who">OVHcloud</span></div>
+        <div class="ledger-row"><span class="yr">2018—2023</span><span class="what">Design system adopté par 5 équipes produit</span><span class="who">Axa France</span></div>
+        <div class="ledger-row"><span class="yr">2017—2018</span><span class="what">Interface embarquée, mémoire contrainte</span><span class="who">Canal+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Approche</p>
+        <h2>Neuf ans sur des applications que l'on ne peut pas éteindre</h2>
+      </div>
+      <div class="about-cols">
+        <div>
+          <div id="about-body"></div>
+          <p class="note" id="note"></p>
+        </div>
+        <div class="portrait">Portrait — Nicolas Pierre-Charles</div>
+      </div>
+
+      <div class="svc" id="svc"></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Références</p>
+        <h2>Quatre contextes, quatre contraintes différentes</h2>
+      </div>
+      <div class="proj" id="proj-list"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Un chantier front à cadrer ?</h2>
+      </div>
+      <div class="contact-grid" id="clist"></div>
+      <div class="booking">
+        <p>Besoin d'un créneau plutôt que d'un échange écrit ? Réservez trente minutes directement dans mon agenda.</p>
+        <button class="btn btn-solid" onclick="this.outerHTML='&lt;p style=&quot;font-family:var(--f-mono);font-size:.8rem;color:var(--ink-2)&quot;&gt;Chargement du calendrier…&lt;/p&gt;'">Prendre rendez-vous</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p style="margin:0">© 2026 Nicode — Nicolas Pierre-Charles</p>
+    <ul>
+      <li><a href="#">LinkedIn</a></li><li><a href="#">GitHub</a></li><li><a href="#">NPM</a></li>
+      <li><a href="#">Mentions légales</a></li><li><a href="#">Crédits</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" tabindex="-1">
+  <div class="drawer-in" id="drawer-in"></div>
+</aside>
+
+<script src="content.js"></script>
+<script>
+document.getElementById('eyebrow-hero').textContent=SITE.eyebrow;
+document.getElementById('lede-hero').textContent=SITE.lede;
+document.getElementById('avail-hero').textContent=SITE.avail;
+document.getElementById('about-body').innerHTML=SITE.about.map(p=>`<p>${p}</p>`).join('');
+document.getElementById('note').textContent=SITE.note;
+document.getElementById('svc').innerHTML=SITE.services.map(s=>
+  `<div><p class="eyebrow">${s.n} — ${s.label}</p><h3>${s.title}</h3><p>${s.body}</p></div>`).join('');
+document.getElementById('clist').innerHTML=SITE.contact.map(c=>
+  `<a href="${c.href}"><p class="eyebrow">${c.label}</p><strong>${c.value}</strong><span>${c.detail}</span></a>`).join('');
+
+const list = document.getElementById('proj-list');
+list.innerHTML = PROJECTS.map((p,i)=>`
+  <button class="proj-item" data-i="${i}" aria-haspopup="dialog">
+    <span class="yr">${p.yr}</span>
+    <span><span class="name">${p.name}</span><span class="role">${p.role}</span></span>
+    <span class="meta">${p.meta} <span class="arrow">→</span></span>
+  </button>`).join('');
+
+const drawer=document.getElementById('drawer'), scrim=document.getElementById('scrim'), inner=document.getElementById('drawer-in');
+let opener=null;
+
+function open(i){
+  const p=PROJECTS[i]; opener=document.activeElement;
+  inner.innerHTML=`
+    <div class="drawer-top">
+      <div>
+        <p class="eyebrow">${p.meta}</p>
+        <h3 id="dtitle">${p.name}</h3>
+        <p class="sub">${p.role} — ${p.yr}</p>
+      </div>
+      <button class="close" aria-label="Fermer">✕</button>
+    </div>
+    <dl class="cs">
+      <dt>Contexte</dt><dd>${p.context}</dd>
+    </dl>
+    <dl class="cs">
+      <dt>Ce que j'ai fait</dt><dd><ul>${p.challenges.map(c=>`<li>${c}</li>`).join('')}</ul></dd>
+    </dl>
+    <dl class="cs">
+      <dt>Résultat</dt><dd>${p.outcome}</dd>
+    </dl>
+    <dl class="cs">
+      <dt>Ce que ça m'a apporté</dt><dd>${p.takeaway}</dd>
+    </dl>
+    <dl class="cs" style="border-bottom:none">
+      <dt>Stack</dt><dd><ul class="tags">${p.stack.map(t=>`<li>${t}</li>`).join('')}</ul></dd>
+    </dl>`;
+  drawer.classList.add('on'); scrim.classList.add('on');
+  document.body.style.overflow='hidden';
+  inner.querySelector('.close').addEventListener('click',close);
+  drawer.focus();
+}
+function close(){
+  drawer.classList.remove('on'); scrim.classList.remove('on');
+  document.body.style.overflow='';
+  opener && opener.focus();
+}
+list.addEventListener('click',e=>{const b=e.target.closest('.proj-item'); if(b) open(+b.dataset.i);});
+scrim.addEventListener('click',close);
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&drawer.classList.contains('on'))close();
+  if(e.key==='Tab'&&drawer.classList.contains('on')){
+    const f=drawer.querySelectorAll('button,a,[tabindex]:not([tabindex="-1"])');
+    if(!f.length)return; const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+</script>
+</body>
+</html>

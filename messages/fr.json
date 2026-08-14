@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Nicode — Développeur full stack React / TypeScript freelance",
+    "description": "J'interviens quand la performance, la dette technique ou l'architecture front ralentissent la livraison produit : migration legacy, web performance, structuration du front au back."
+  },
+  "nav": {
+    "about": "Approche",
+    "projects": "Références",
+    "contact": "Contact",
+    "skipToContent": "Aller au contenu",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "switchLanguage": "Switch to English"
+  },
+  "hero": {
+    "ctaProjects": "Voir mes références",
+    "ctaContact": "Me contacter"
+  },
+  "projects": {
+    "readMore": "En savoir plus",
+    "close": "Fermer",
+    "context": "Contexte",
+    "challenges": "Ce que j'ai fait",
+    "outcome": "Résultat",
+    "takeaway": "Ce que ça m'a apporté",
+    "stack": "Stack",
+    "viewWebsite": "Voir le site",
+    "viewSource": "Voir le code"
+  },
+  "contact": {
+    "bookingIntro": "Besoin d'un créneau plutôt que d'un échange écrit ? Réservez trente minutes directement dans mon agenda.",
+    "bookingCta": "Prendre rendez-vous",
+    "bookingLoading": "Chargement du calendrier…"
+  },
+  "footer": {
+    "legal": "Mentions légales",
+    "credits": "Crédits",
+    "backToTop": "Retour en haut de page"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Cette adresse ne mène nulle part. Le contenu a peut-être été déplacé.",
+    "cta": "Retour à l'accueil"
+  }
+}

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicode — Direction 3 : Néo-brutaliste</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1EFE7; --card:#FFFFFF; --ink:#0F0F0F; --ink-2:#55534C;
+  --blue:#2B4CFF; --yellow:#FFD400; --edge:#0F0F0F; --sh:6px 6px 0 var(--edge);
+  --f-d:"Bricolage Grotesque",system-ui,sans-serif; --f-m:"Space Mono",monospace; --f-b:"Inter",system-ui,sans-serif;
+  --page:min(1280px,100% - 2.5rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#121212;--card:#1C1C1C;--ink:#F4F2EA;--ink-2:#9C988D;--edge:#F4F2EA;--blue:#6F86FF;--yellow:#FFD400;--sh:6px 6px 0 var(--edge);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-b);font-size:16.5px;line-height:1.58;-webkit-font-smoothing:antialiased}
+.wrap{width:var(--page);margin-inline:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.mono{font-family:var(--f-m);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:3px solid var(--edge)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:1.5rem}
+.brand{font-family:var(--f-d);font-weight:800;font-size:1.3rem;letter-spacing:-.03em;text-decoration:none;background:var(--yellow);color:#0F0F0F;padding:.15rem .6rem;border:3px solid var(--edge);box-shadow:3px 3px 0 var(--edge)}
+.nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+.nav ul a{font-family:var(--f-m);font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:3px solid transparent}
+.nav ul a:hover{border-bottom-color:var(--blue)}
+.lang{font-family:var(--f-m);font-size:.75rem;border:3px solid var(--edge);padding:.2rem .55rem;display:flex;gap:.4rem;background:var(--card)}
+.lang b{color:var(--blue)}
+.lang a{text-decoration:none;color:var(--ink-2)}
+@media(max-width:880px){.nav ul{display:none}}
+
+/* ── SIGNATURE : le bandeau défilant. Une ligne de production qui ne s'arrête pas. ── */
+.band{background:var(--blue);color:#fff;border-block:3px solid var(--edge);overflow:hidden;padding:.55rem 0}
+.band-track{display:flex;gap:2.5rem;width:max-content;animation:run 30s linear infinite;font-family:var(--f-m);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+@keyframes run{to{transform:translateX(-50%)}}
+.band-track span::before{content:"◆";margin-right:2.5rem;opacity:.55}
+
+.hero{padding:clamp(3rem,8vw,6rem) 0}
+h1{font-family:var(--f-d);font-weight:800;font-size:clamp(2.5rem,8.2vw,6rem);line-height:.96;letter-spacing:-.045em;margin:1.2rem 0 0;max-width:15ch;text-transform:uppercase}
+h1 mark{background:var(--yellow);color:#0F0F0F;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lede{font-size:clamp(1.02rem,1.6vw,1.2rem);max-width:56ch;margin:1.7rem 0 0;color:var(--ink-2)}
+.actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2.3rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;font-family:var(--f-m);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;border:3px solid var(--edge);box-shadow:var(--sh);cursor:pointer;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--edge)}
+.btn:active{transform:translate(6px,6px);box-shadow:0 0 0 var(--edge)}
+.btn-p{background:var(--blue);color:#fff}
+.btn-s{background:var(--card);color:var(--ink)}
+.avail{display:inline-flex;align-items:center;gap:.55rem;margin-top:2rem;font-family:var(--f-m);font-size:.76rem;text-transform:uppercase;letter-spacing:.05em}
+.dot{width:9px;height:9px;background:#12B76A;border:2px solid var(--edge)}
+
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.sec-head{border-top:3px solid var(--edge);padding-top:1.2rem;margin-bottom:2.75rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:flex-end}
+h2{font-family:var(--f-d);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.2rem);letter-spacing:-.035em;line-height:1.03;margin:.4rem 0 0;text-transform:uppercase;max-width:20ch}
+.card{background:var(--card);border:3px solid var(--edge);box-shadow:var(--sh);padding:1.75rem}
+
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:1.75rem;align-items:start}
+@media(max-width:920px){.about{grid-template-columns:1fr}}
+.about p{margin:0 0 1.15rem;color:var(--ink-2)}
+.about p:first-child{color:var(--ink);font-size:1.14rem;font-weight:500}
+/* spécificité : doit battre `.about p`, sinon le texte hérite de --ink-2 sur fond jaune */
+.about p.note{background:var(--yellow);color:#0F0F0F;border:3px solid var(--edge);padding:1.1rem 1.25rem;margin-top:1.6rem;font-size:.94rem}
+.portrait{aspect-ratio:4/5;background:var(--blue);border:3px solid var(--edge);box-shadow:var(--sh);display:grid;place-items:center;color:#fff;font-family:var(--f-m);font-size:.75rem;text-align:center;padding:1rem}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:1.75rem}
+@media(max-width:920px){.svc{grid-template-columns:1fr}}
+.svc .num{font-family:var(--f-d);font-weight:800;font-size:2.6rem;line-height:1;letter-spacing:-.04em;color:var(--blue)}
+.svc h3{font-family:var(--f-d);font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:-.02em;margin:.7rem 0 .55rem}
+.svc p{margin:0;color:var(--ink-2);font-size:.93rem}
+
+.plist{display:grid;grid-template-columns:repeat(2,1fr);gap:1.75rem}
+@media(max-width:860px){.plist{grid-template-columns:1fr}}
+.pcard{text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:1rem;transition:transform .12s,box-shadow .12s,background .15s}
+.pcard:hover,.pcard:focus-visible{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--edge);background:var(--yellow);color:#0F0F0F}
+.pcard .top{display:flex;justify-content:space-between;gap:1rem;font-family:var(--f-m);font-size:.72rem;text-transform:uppercase}
+.pcard h3{font-family:var(--f-d);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.3rem);text-transform:uppercase;letter-spacing:-.035em;margin:0;line-height:1}
+.pcard .role{font-size:.9rem;opacity:.75;margin:.3rem 0 0}
+.pcard .tag{font-family:var(--f-m);font-size:.75rem;border-top:3px solid currentColor;padding-top:.8rem;margin:0;display:flex;justify-content:space-between;gap:1rem}
+
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+@media(max-width:860px){.cgrid{grid-template-columns:1fr}}
+.cway{text-decoration:none;display:block;transition:transform .12s,box-shadow .12s,background .15s}
+.cway:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--edge);background:var(--blue);color:#fff}
+.cway strong{display:block;font-family:var(--f-d);font-weight:800;font-size:1.35rem;letter-spacing:-.02em;margin:.6rem 0 .35rem}
+.cway span{font-size:.9rem;opacity:.78}
+.booking{margin-top:1.75rem;display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:space-between;align-items:center}
+.booking p{margin:0;max-width:48ch;color:var(--ink-2)}
+
+footer{border-top:3px solid var(--edge);padding:2.5rem 0 3.5rem;font-family:var(--f-m);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em}
+.foot{display:flex;flex-wrap:wrap;gap:1.25rem;justify-content:space-between;align-items:center}
+.foot ul{display:flex;flex-wrap:wrap;gap:1.25rem;list-style:none;margin:0;padding:0}
+.foot a{text-decoration:none}.foot a:hover{color:var(--blue)}
+
+.scrim{position:fixed;inset:0;background:color-mix(in srgb,var(--ink) 55%,transparent);opacity:0;pointer-events:none;transition:opacity .3s;z-index:90}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:80vw;max-width:1060px;background:var(--paper);border-left:3px solid var(--edge);transform:translateX(100%);transition:transform .4s cubic-bezier(.32,.72,0,1);z-index:100;overflow-y:auto;overscroll-behavior:contain}
+.drawer.on{transform:none}
+@media(max-width:768px){.drawer{width:100vw}}
+.din{padding:clamp(1.5rem,4vw,3rem)}
+.dtop{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;position:sticky;top:0;background:var(--paper);padding-bottom:1.2rem;border-bottom:3px solid var(--edge);margin-bottom:2rem}
+.drawer h3{font-family:var(--f-d);font-weight:800;font-size:clamp(1.9rem,4.4vw,3rem);text-transform:uppercase;letter-spacing:-.04em;margin:.5rem 0 .3rem;line-height:.98}
+.drawer .sub{font-family:var(--f-m);font-size:.76rem;text-transform:uppercase;color:var(--ink-2)}
+.close{background:var(--yellow);color:#0F0F0F;border:3px solid var(--edge);box-shadow:3px 3px 0 var(--edge);width:2.7rem;height:2.7rem;cursor:pointer;font-size:1.05rem;flex-shrink:0;font-weight:700}
+.close:hover{transform:translate(3px,3px);box-shadow:0 0 0 var(--edge)}
+.cs{display:grid;grid-template-columns:10rem 1fr;gap:1.2rem 2rem;padding:1.4rem 0;border-bottom:3px solid var(--edge)}
+@media(max-width:720px){.cs{grid-template-columns:1fr;gap:.55rem}}
+.cs dt{font-family:var(--f-m);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;margin:0;color:var(--blue)}
+.cs dd{margin:0;max-width:66ch;color:var(--ink-2)}
+.cs ul{margin:0;padding-left:1.1rem}
+.cs li{margin-bottom:.55rem}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:0}
+.tags li{font-family:var(--f-m);font-size:.74rem;padding:.28rem .6rem;border:3px solid var(--edge);background:var(--card)}
+</style>
+</head>
+<body>
+
+<header><div class="wrap nav">
+  <a class="brand" href="#">NICODE</a>
+  <nav><ul><li><a href="#about">Approche</a></li><li><a href="#projects">Références</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+  <div class="lang"><b>FR</b><a href="#">EN</a></div>
+</div></header>
+
+<div class="band"><div class="band-track" id="band"></div></div>
+
+<main>
+  <section class="hero"><div class="wrap">
+    <p class="mono" id="eyebrow"></p>
+    <h1>Reprenez le contrôle de votre front-end, <mark>sans tout réécrire.</mark></h1>
+    <p class="lede" id="lede"></p>
+    <div class="actions">
+      <a class="btn btn-p" href="#projects">Voir mes références</a>
+      <a class="btn btn-s" href="#contact">Me contacter</a>
+    </div>
+    <p class="avail"><span class="dot"></span><span id="avail"></span></p>
+  </div></section>
+
+  <section id="about"><div class="wrap">
+    <div class="sec-head"><div><p class="mono">Approche</p><h2>Neuf ans sur des applis que l'on ne peut pas éteindre</h2></div>
+      <p class="mono" style="color:var(--ink-2);margin:0">Depuis 2017 — sans interruption</p></div>
+    <div class="about">
+      <div class="card"><div id="about-body"></div><p class="note" id="note"></p></div>
+      <div class="portrait">Portrait — Nicolas Pierre-Charles</div>
+    </div>
+    <div class="svc" id="svc"></div>
+  </div></section>
+
+  <section id="projects"><div class="wrap">
+    <div class="sec-head"><div><p class="mono">Références</p><h2>Quatre contextes, quatre contraintes</h2></div>
+      <p class="mono" style="color:var(--ink-2);margin:0">Cliquez pour le détail</p></div>
+    <div class="plist" id="plist"></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="sec-head"><div><p class="mono">Contact</p><h2>Un chantier front à cadrer ?</h2></div></div>
+    <div class="cgrid" id="clist"></div>
+    <div class="card booking">
+      <p>Besoin d'un créneau plutôt que d'un échange écrit ? Réservez trente minutes directement dans mon agenda.</p>
+      <button class="btn btn-p" id="cal">Prendre rendez-vous</button>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap foot">
+  <p style="margin:0">© 2026 Nicode — Nicolas Pierre-Charles</p>
+  <ul><li><a href="#">LinkedIn</a></li><li><a href="#">GitHub</a></li><li><a href="#">NPM</a></li><li><a href="#">Mentions légales</a></li><li><a href="#">Crédits</a></li></ul>
+</div></footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dtitle" tabindex="-1"><div class="din" id="din"></div></aside>
+
+<script src="content.js"></script>
+<script>
+const BAND=["Migration legacy","Web performance","Architecture front","React · TypeScript","Design systems","Micro-frontends","React Native","Full remote"];
+document.getElementById('band').innerHTML=BAND.concat(BAND).map(t=>`<span>${t}</span>`).join('');
+document.getElementById('eyebrow').textContent=SITE.eyebrow;
+document.getElementById('lede').textContent=SITE.lede;
+document.getElementById('avail').textContent=SITE.avail;
+document.getElementById('about-body').innerHTML=SITE.about.map(p=>`<p>${p}</p>`).join('');
+document.getElementById('note').textContent=SITE.note;
+document.getElementById('svc').innerHTML=SITE.services.map(s=>
+  `<div class="card"><p class="num">${s.n}</p><p class="mono" style="color:var(--ink-2)">${s.label}</p><h3>${s.title}</h3><p>${s.body}</p></div>`).join('');
+document.getElementById('plist').innerHTML=PROJECTS.map((p,i)=>`
+  <button class="card pcard" data-i="${i}" aria-haspopup="dialog">
+    <div class="top"><span>${p.yr}</span><span>${p.meta.split(' · ')[1]||''}</span></div>
+    <div><h3>${p.name}</h3><p class="role">${p.role}</p></div>
+    <p class="tag"><span>${p.tag}</span><span>→</span></p>
+  </button>`).join('');
+document.getElementById('clist').innerHTML=SITE.contact.map(c=>
+  `<a class="card cway" href="${c.href}"><p class="mono">${c.label}</p><strong>${c.value}</strong><span>${c.detail}</span></a>`).join('');
+document.getElementById('cal').addEventListener('click',function(){
+  this.outerHTML='<p class="mono" style="margin:0">Chargement du calendrier…</p>';});
+
+const drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim'),din=document.getElementById('din');
+let opener=null;
+function open(i){
+  const p=PROJECTS[i];opener=document.activeElement;
+  din.innerHTML=`
+  <div class="dtop"><div><p class="mono" style="color:var(--blue)">${p.meta}</p><h3 id="dtitle">${p.name}</h3><p class="sub">${p.role} — ${p.yr}</p></div>
+    <button class="close" aria-label="Fermer">✕</button></div>
+  <dl class="cs"><dt>Contexte</dt><dd>${p.context}</dd></dl>
+  <dl class="cs"><dt>Ce que j'ai fait</dt><dd><ul>${p.challenges.map(c=>`<li>${c}</li>`).join('')}</ul></dd></dl>
+  <dl class="cs"><dt>Résultat</dt><dd>${p.outcome}</dd></dl>
+  <dl class="cs"><dt>Ce que ça m'a apporté</dt><dd>${p.takeaway}</dd></dl>
+  <dl class="cs" style="border-bottom:none"><dt>Stack</dt><dd><ul class="tags">${p.stack.map(t=>`<li>${t}</li>`).join('')}</ul></dd></dl>`;
+  drawer.classList.add('on');scrim.classList.add('on');document.body.style.overflow='hidden';
+  din.querySelector('.close').addEventListener('click',close);drawer.focus();
+}
+function close(){drawer.classList.remove('on');scrim.classList.remove('on');document.body.style.overflow='';opener&&opener.focus();}
+document.getElementById('plist').addEventListener('click',e=>{const b=e.target.closest('.pcard');if(b)open(+b.dataset.i);});
+scrim.addEventListener('click',close);
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&drawer.classList.contains('on'))close();
+  if(e.key==='Tab'&&drawer.classList.contains('on')){
+    const f=drawer.querySelectorAll('button,a,[tabindex]:not([tabindex="-1"])');if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}
+});
+</script>
+</body>
+</html>
