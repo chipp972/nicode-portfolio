@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Nicode — Freelance full stack React / TypeScript developer",
+    "description": "I step in when performance, technical debt or frontend architecture slow down product delivery: legacy migration, web performance, front-to-back structuring."
+  },
+  "nav": {
+    "about": "Approach",
+    "projects": "Work",
+    "contact": "Contact",
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Passer en français"
+  },
+  "hero": {
+    "ctaProjects": "See my work",
+    "ctaContact": "Get in touch"
+  },
+  "projects": {
+    "readMore": "Read more",
+    "close": "Close",
+    "context": "Context",
+    "challenges": "What I did",
+    "outcome": "Outcome",
+    "takeaway": "What I took from it",
+    "stack": "Stack",
+    "viewWebsite": "Visit the site",
+    "viewSource": "View the code"
+  },
+  "contact": {
+    "bookingIntro": "Would a call work better than an email? Book thirty minutes straight into my calendar.",
+    "bookingCta": "Book a call",
+    "bookingLoading": "Loading the calendar…"
+  },
+  "footer": {
+    "legal": "Legal notice",
+    "credits": "Credits",
+    "backToTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This address leads nowhere. The content may have moved.",
+    "cta": "Back to home"
+  }
+}

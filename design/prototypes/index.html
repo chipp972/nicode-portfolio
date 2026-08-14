@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>nicode.fr — 4 directions visuelles</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F6F8;--card:#fff;--ink:#12161C;--ink2:#5B6676;--line:#E2E6EC;--ac:#1F3BE0}
+@media(prefers-color-scheme:dark){:root{--bg:#0B0D11;--card:#141922;--ink:#EDEFF3;--ink2:#8E9AAB;--line:#232A35;--ac:#8FA2FF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+.wrap{width:min(1100px,100% - 3rem);margin:0 auto;padding:4rem 0 5rem}
+h1{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.03em;margin:.6rem 0 .8rem}
+.mono{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin:0}
+.intro{color:var(--ink2);max-width:62ch;margin:0 0 3rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+@media(max-width:800px){.grid{grid-template-columns:1fr}}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.75rem;transition:transform .2s,border-color .2s,box-shadow .2s}
+a.card:hover{transform:translateY(-4px);border-color:var(--ac);box-shadow:0 18px 40px -24px rgba(0,0,0,.45)}
+a.card h2{font-size:1.4rem;letter-spacing:-.02em;margin:.7rem 0 .5rem}
+a.card p{margin:0;color:var(--ink2);font-size:.94rem}
+.swatch{display:flex;gap:.4rem;margin-top:1.25rem}
+.swatch i{width:26px;height:26px;border-radius:7px;border:1px solid var(--line)}
+.type{font-size:.8rem;color:var(--ink2);margin-top:.9rem;font-family:"JetBrains Mono",monospace}
+.note{margin-top:3rem;padding:1.25rem 1.5rem;border-left:3px solid var(--ac);background:var(--card);border-radius:0 12px 12px 0;color:var(--ink2);font-size:.93rem}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="mono">Refonte nicode.fr — Phase 0</p>
+  <h1>Quatre directions visuelles</h1>
+  <p class="intro">Chaque maquette est une page complète et fonctionnelle : hero, approche, références, drawer de case study, contact, pied de page. Le contenu est réel et identique partout, pour que la comparaison porte sur le design seul. Cliquez sur une référence pour ouvrir le drawer. Basculez le thème de votre système pour voir le mode sombre.</p>
+
+  <div class="grid">
+    <a class="card" href="01-editorial.html">
+      <p class="mono">Direction 1</p>
+      <h2>Éditorial</h2>
+      <p>Typographie large, grille aérée, hiérarchie stricte. Le parcours se lit comme un relevé daté plutôt que comme un carrousel. Registre consultant senior — c'est la direction la plus crédible auprès des grands comptes.</p>
+      <div class="swatch"><i style="background:#EDEFF3"></i><i style="background:#10141B"></i><i style="background:#1F3BE0"></i><i style="background:#DDE2FB"></i></div>
+      <p class="type">Fraunces · Inter Tight · JetBrains Mono</p>
+    </a>
+
+    <a class="card" href="02-bento-dark.html">
+      <p class="mono">Direction 2</p>
+      <h2>Bento sombre</h2>
+      <p>La page est une console : chaque bloc est une tuile de tableau de bord, dont une tuile de stack qui défile. Sombre par défaut, accents menthe hérités du teal actuel. Registre produit tech.</p>
+      <div class="swatch"><i style="background:#07080A"></i><i style="background:#101319"></i><i style="background:#7DE0C0"></i><i style="background:#A79BFF"></i></div>
+      <p class="type">Space Grotesk · Inter · JetBrains Mono</p>
+    </a>
+
+    <a class="card" href="03-neo-brutalist.html">
+      <p class="mono">Direction 3</p>
+      <h2>Néo-brutaliste</h2>
+      <p>Bordures épaisses, ombres dures décalées, bandeau défilant, capitales serrées. La plus mémorable et la plus différenciante — aussi la plus clivante. Cohérente avec le versant créateur de contenu.</p>
+      <div class="swatch"><i style="background:#F1EFE7"></i><i style="background:#0F0F0F"></i><i style="background:#2B4CFF"></i><i style="background:#FFD400"></i></div>
+      <p class="type">Bricolage Grotesque · Space Mono · Inter</p>
+    </a>
+
+    <a class="card" href="04-continuite.html">
+      <p class="mono">Direction 4</p>
+      <h2>Continuité modernisée</h2>
+      <p>Reprend la palette crème et teal du site actuel ainsi que les transitions en vague, mais avec une typographie, un rythme et des animations refaits. L'identité reste reconnaissable — l'option la moins risquée.</p>
+      <div class="swatch"><i style="background:#FFFDF0"></i><i style="background:#92CAB5"></i><i style="background:#3E7F68"></i><i style="background:#F0A04B"></i></div>
+      <p class="type">Outfit · Karla</p>
+    </a>
+  </div>
+
+  <p class="note">Le contenu vient du positionnement freelance 2026 : OVHcloud au passé, formulations en « j'ai contribué à », performance web rattachée à Axa France uniquement. <strong>Canal+ figure dans les quatre maquettes</strong> alors que les règles de prospection le réservent au CV — décision à trancher avant publication.</p>
+</div>
+</body>
+</html>
