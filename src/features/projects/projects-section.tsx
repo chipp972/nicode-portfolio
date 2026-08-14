@@ -39,7 +39,7 @@ export function ProjectsSection({ content }: { content: Projects }) {
                 setOpen(true);
               }}
               aria-haspopup="dialog"
-              className="border-rule hover:bg-accent-soft focus-visible:bg-accent-soft grid w-full cursor-pointer grid-cols-1 items-center gap-x-8 gap-y-2 border-b px-2 py-8 text-left transition-[background-color,padding] duration-200 hover:pl-5 md:grid-cols-[6.5rem_1fr_12rem]">
+              className="border-rule hover:bg-accent-soft focus-visible:bg-accent-soft grid w-full cursor-pointer grid-cols-1 items-center gap-x-8 gap-y-2 border-b px-2 py-8 text-left transition-[background-color,padding] duration-200 hover:pl-5 md:grid-cols-[7.5rem_1fr_11rem]">
               <span className="font-mono text-ink-2 text-xs">{project.period}</span>
 
               <span>

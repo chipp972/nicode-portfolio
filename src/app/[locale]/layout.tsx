@@ -7,6 +7,7 @@ import { routing } from '@/i18n/routing';
 import { getContent } from '@/content';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
+import { JsonLd } from '@/components/seo/json-ld';
 import '../globals.css';
 
 const fraunces = Fraunces({
@@ -48,6 +49,8 @@ export async function generateMetadata({
     description: t('description'),
     alternates: {
       canonical: `/${locale}`,
+      // Next 16 n'émet pas la clé `x-default`, quelle que soit la façon de la déclarer.
+      // Les deux locales étant explicitement listées, l'absence reste sans effet notable.
       languages: Object.fromEntries(routing.locales.map((l) => [l, `/${l}`])),
     },
     openGraph: {
@@ -74,7 +77,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const t = await getTranslations('nav');
-  const { social } = getContent(locale);
+  const content = getContent(locale);
 
   return (
     <html
@@ -88,9 +91,10 @@ export default async function LocaleLayout({
             {t('skipToContent')}
           </a>
 
+          <JsonLd content={content} locale={locale} />
           <Header locale={locale} />
           <main id="main">{children}</main>
-          <Footer locale={locale} social={social} />
+          <Footer locale={locale} social={content.social} />
         </NextIntlClientProvider>
       </body>
     </html>
