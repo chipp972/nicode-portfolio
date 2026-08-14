@@ -4,6 +4,9 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Fraunces, Inter_Tight, JetBrains_Mono } from 'next/font/google';
 import { routing } from '@/i18n/routing';
+import { getContent } from '@/content';
+import { Header } from '@/components/layout/header';
+import { Footer } from '@/components/layout/footer';
 import '../globals.css';
 
 const fraunces = Fraunces({
@@ -70,12 +73,25 @@ export default async function LocaleLayout({
 
   setRequestLocale(locale);
 
+  const t = await getTranslations('nav');
+  const { social } = getContent(locale);
+
   return (
     <html
       lang={locale}
       className={`${fraunces.variable} ${interTight.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans text-[17px] leading-relaxed">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <a
+            href="#main"
+            className="bg-accent sr-only rounded-[2px] px-4 py-2 text-white focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-100">
+            {t('skipToContent')}
+          </a>
+
+          <Header locale={locale} />
+          <main id="main">{children}</main>
+          <Footer locale={locale} social={social} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
