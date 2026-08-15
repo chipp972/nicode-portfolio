@@ -8,3 +8,6 @@ next-env.d.ts
 .DS_Store
 .netlify/
 coverage/
+
+# Journal de travail local, non versionné
+*.local.md
