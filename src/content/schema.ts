@@ -20,7 +20,6 @@ export const heroSchema = z.object({
   titleLead: nonEmpty,
   titleAccent: nonEmpty,
   lede: nonEmpty,
-  availability: nonEmpty,
 });
 
 /** Une ligne du relevé de parcours affiché sous le hero. */
@@ -41,7 +40,6 @@ export const aboutSchema = z.object({
   eyebrow: nonEmpty,
   title: nonEmpty,
   paragraphs: z.array(nonEmpty).min(1),
-  note: nonEmpty,
   portraitAlt: nonEmpty,
   services: z.array(serviceSchema).length(3),
 });

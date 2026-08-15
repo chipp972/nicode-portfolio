@@ -17,10 +17,6 @@ export function AboutSection({ content }: { content: About }) {
               {paragraph}
             </p>
           ))}
-
-          <p className="border-accent text-ink-2 mt-8 border-l-2 py-1 pl-5 text-[0.95rem]">
-            {content.note}
-          </p>
         </div>
 
         {/*

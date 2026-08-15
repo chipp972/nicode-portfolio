@@ -5,7 +5,6 @@ export const hero: Hero = {
   titleLead: 'Reprenez le contrôle de votre front-end,',
   titleAccent: 'sans tout réécrire.',
   lede: "J'interviens quand la performance, la dette technique ou l'architecture front ralentissent la livraison produit : migration legacy, web performance, structuration du front au back.",
-  availability: 'Disponible pour mission : full remote ou hybride',
 };
 
 /**

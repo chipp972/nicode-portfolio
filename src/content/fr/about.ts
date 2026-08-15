@@ -4,12 +4,12 @@ export const about: About = {
   eyebrow: 'Approche',
   title: "Neuf ans sur des applications que l'on ne peut pas éteindre",
   paragraphs: [
-    "Développeur front-end depuis 2017, en continu, sur des applications web critiques à fort trafic : l'espace client d'OVHcloud, celui d'Axa France, l'interface embarquée des décodeurs Canal+.",
+    "Développeur full stack depuis 2017, en continu, sur des applications web critiques à fort trafic : l'espace client d'OVHcloud, celui d'Axa France, l'interface embarquée des décodeurs Canal+.",
     'Je travaille avec des grands comptes et des scale-ups : les organisations où plusieurs équipes produit avancent en parallèle sur la même base de code, où la performance et la conformité ne se négocient pas, et où une migration doit se faire sans jamais couper le service.',
     'Mon cœur de métier tient en trois choses. Faire migrer des bases de code legacy vers React et TypeScript sans interrompre le service. Concevoir des composants réutilisables et les distribuer à des équipes qui les consomment. Répondre du coût réel de ce qui part dans le navigateur.',
+    "Ma dominante reste le front, mais je ne m'arrête pas à la frontière du navigateur. J'ai contribué aux développements NestJS du BFF qui alimentait l'espace client d'OVHcloud, et je pratique Node.js et le rendu serveur Next.js depuis Axa France et sur mes projets personnels. La forme d'une API, le nombre d'allers-retours qu'elle impose, ce qui se calcule côté serveur plutôt que dans le navigateur : ces arbitrages se prennent des deux côtés de la frontière.",
     "J'intègre Claude Code et GitHub Copilot au quotidien : je structure les bases de code pour que la génération assistée reste maintenable, et je garde la revue humaine comme point de contrôle avant chaque PR.",
   ],
-  note: "J'ai contribué à ces chantiers au sein d'équipes, jamais seul. Je n'ai pas de titre d'architecte et je ne m'en réclame pas : ce que j'apporte, c'est une montée en compétence rapide sur une base de code existante, et du code qui reste lisible après mon départ.",
   portraitAlt: 'Nicolas Pierre-Charles, développeur full stack React et TypeScript',
   services: [
     {
@@ -28,7 +28,7 @@ export const about: About = {
       index: '03',
       label: 'Architecture',
       title: 'Faire tenir plusieurs équipes',
-      body: "Design systems, micro-frontends, monorepos, librairies internes publiées sur registry privé. De quoi laisser chaque équipe produit livrer sans attendre les autres, y compris à l'échelle de plusieurs pays.",
+      body: "Design systems, micro-frontends, monorepos, librairies internes publiées sur registry privé, couche BFF entre le front et les API métier. De quoi laisser chaque équipe produit livrer sans attendre les autres, y compris à l'échelle de plusieurs pays.",
     },
   ],
 };

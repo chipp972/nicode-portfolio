@@ -5,7 +5,6 @@ export const hero: Hero = {
   titleLead: 'Take back control of your front-end,',
   titleAccent: 'without rewriting it.',
   lede: 'I step in when performance, technical debt or frontend architecture slow down product delivery: legacy migration, web performance, front-to-back structuring.',
-  availability: 'Available for contract work: fully remote or hybrid',
 };
 
 export const ledger: LedgerEntry[] = [

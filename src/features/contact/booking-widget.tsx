@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { CalendarIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 
-const CALENDLY_URL = 'https://calendly.com/nicolas-nicode/30min';
+const CALENDLY_URL = 'https://calendly.com/nicolas-178/30min';
 
 /**
  * Calendly n'est chargé qu'après un clic explicite.

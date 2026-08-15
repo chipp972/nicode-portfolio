@@ -34,14 +34,6 @@ export async function HeroSection({ content, ledger }: { content: Hero; ledger: 
           </ButtonLink>
         </div>
 
-        <p className="font-mono text-ink-2 mt-9 flex items-center gap-2.5 text-xs">
-          <span
-            className="bg-positive size-[7px] shrink-0 rounded-full ring-4 ring-[color-mix(in_srgb,var(--positive)_20%,transparent)]"
-            aria-hidden
-          />
-          {content.availability}
-        </p>
-
         <dl className="border-rule mt-[clamp(3rem,6vw,4.5rem)] border-t">
           {ledger.map((entry) => (
             <div

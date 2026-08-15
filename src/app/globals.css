@@ -14,7 +14,6 @@
   --rule: #c7cdd7;
   --accent: #1f3be0;
   --accent-soft: #dde2fb;
-  --positive: #14a06a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,7 +25,6 @@
     --rule: #252c38;
     --accent: #8fa2ff;
     --accent-soft: #1a2140;
-    --positive: #3ddb9c;
   }
 }
 
@@ -38,7 +36,6 @@
   --color-rule: var(--rule);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  --color-positive: var(--positive);
 
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-inter-tight), system-ui, sans-serif;
